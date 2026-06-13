@@ -40,7 +40,7 @@ function Navbar() {
                   },
                 }}
                 transition={{ duration: 0.2 }}
-                className="relative  group inline-block w-fit  cursor-pointer"
+                className="relative group inline-block w-fit  cursor-pointer"
               >
                 Home
                 <motion.span
