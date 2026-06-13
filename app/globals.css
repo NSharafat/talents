@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #fff8f0;
+  --secondary: #16db65;
+  --primary: #1e1e24;
+  --accent: #fcc600;
+  --gray: #e2e2e2;
 }
 
 @theme inline {
@@ -20,7 +23,147 @@
 }
 
 body {
-  background: var(--background);
+  background-color: var(--white);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "poppins";
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-family: "dm sans display";
+  font-weight: bolder;
+}
+/* h1 {
+  font-family: "poppins";
+} */
+button.tags,
+p.tags {
+  font-family: "Cascadia Code";
+}
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.card {
+  height: 100%;
+}
+.card:hover {
+  background-color: rgba(22, 219, 101, 0.055);
+  transition: all 0.5s;
+}
+.card-title {
+  font-size: large;
+  transition: all 0.3s;
+}
+.expertise-contents-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 2rem;
+}
+.expertise-cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.expertise-main-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.expertise-sub-title {
+  font-size: 1.2rem;
+}
+.testimonial-contents-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.t-mask {
+  background-image: url("/cover.png");
+  background-size: cover;
+  background-position: center;
+
+  -webkit-mask-image: url("/T-talents-03.png");
+  mask-image: url("/T-talents-03.png");
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.sticky-card {
+  display: grid;
+  grid-template-columns: 4fr;
+}
+
+.why-us-title-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+.why-us-cta-button {
+  justify-content: start;
+  width: 100%;
+}
+
+.why-choose-us-cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 800px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    transition: all 0.5s ease;
+  }
+  .cards-wrapper:has(.card:nth-child(1):hover) {
+    grid-template-columns: 3fr 1.5fr 1.5fr;
+  }
+  .cards-wrapper:has(.card:nth-child(2):hover) {
+    grid-template-columns: 1.5fr 3fr 1.5fr;
+  }
+  .cards-wrapper:has(.card:nth-child(3):hover) {
+    grid-template-columns: 1.5fr 1.5fr 3fr;
+  }
+  .card:hover .card-title {
+    font-size: larger;
+    transition: all 0.3s;
+  }
+
+  .expertise-contents-wrapper {
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding: 0px;
+  }
+
+  .expertise-cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .sticky-card {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .why-us-title-wrapper {
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+  }
+  .why-us-cta-button {
+    justify-content: end;
+  }
+
+  .why-choose-us-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .testimonial-contents-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
