@@ -176,7 +176,7 @@ function Testimonials() {
           <div className="image-wrapper justify-end rounded flex  gap-10">
             <div className="flex flex-col gap-5">
               <div
-                className={`h-60 flex flex-row overflow-hidden w-80  transition-all  duration-300`}
+                className={`h-60 flex  flex-row overflow-hidden w-80  transition-all  duration-300`}
               >
                 <div
                   className={`flex transition-all duration-500`}
@@ -191,7 +191,7 @@ function Testimonials() {
                         animate={index == -1 * i ? "show" : "hidden"}
                       >
                         <motion.div
-                          className="relative min-w-80 h-full flex justify-end rounded-xl overflow-hidden  "
+                          className="relative min-w-80 h-full flex  rounded-xl overflow-hidden  "
                           variants={imageChildVariants}
                         >
                           <Image

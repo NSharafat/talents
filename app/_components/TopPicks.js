@@ -60,23 +60,21 @@ function TopPicks() {
     return () => clearInterval(interval);
   }, [hovered]);
   return (
-    <motion.div className=" gap-5 flex overflow-hidden flex-col justify-start bg-(--primary)/95 ">
-      <div className="max-w-270 mx-auto flex flex-col gap-30">
-        <div className="flex py-10 flex-col">
-          <div className="flex  flex-col gap-5 mb-10">
-            <h1 className="text-4xl text-(--secondary) uppercase">
-              Top Picks for you
-            </h1>
+    <div className="bg-(--primary)/95 h-full w-full py-20 overflow-hidden px-10">
+      <div className="max-w-270 mx-auto ">
+        <div className="flex py-10 flex-col  w-full">
+          <div className="flex flex-col gap-5 mb-10  w-full">
+            <h1 className="text-(--secondary) uppercase">Top Picks for you</h1>
             <p className="text-(--white)">
               Discover outstanding professionals, industry leaders, and
               innovators from around the globe—all curated in one trusted
               destination.
             </p>
           </div>
-          <hr className=" w-[30%] bg-(--white)" />
+          <hr className=" bg-(--white)" />
         </div>
         <motion.div
-          className="flex main-wrapper my-10 items-end  py-5 h-100  "
+          className="flex main-wrapper  my-10 items-end  py-5 h-100  "
           initial={{ x: 0 }}
           animate={{
             x: activeCenter < 3 ? 0 : -((activeCenter - 3) * 216),
@@ -127,7 +125,7 @@ function TopPicks() {
           ))}
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

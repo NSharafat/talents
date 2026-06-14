@@ -88,7 +88,7 @@ function FAQ() {
       ></motion.div>
 
       <div className="flex bg-(--gray)/20 relative z-1">
-        <div className="question-wrapper max-w-270 mx-auto py-15 grid grid-cols-[1fr_4fr_1fr]">
+        <div className="question-wrapper max-w-270 mx-auto py-15 flex  flex-col px-10">
           <div></div>
           <div className="flex flex-col gap-2">
             <div className="flex  flex-col gap-5 mb-10">
@@ -99,62 +99,64 @@ function FAQ() {
                 destination.
               </p>
             </div>
-            {faqs.map((faq, i) => (
-              <motion.div
-                key={i}
-                className="question-contents-wrapper hover:cursor-pointer overflow-hidden"
-                onClick={() =>
-                  activeFaq == faq.id
-                    ? setActiveFaq(null)
-                    : setActiveFaq(faq.id)
-                }
-                variants={questionVariants}
-              >
-                <div
-                  className={`question relative z-1 py-5 px-10 transition-all duration-500 justify-between ${activeFaq == faq.id ? " shadow-md shadow-(color:--gray) bg-(--primary)/20 " : "bg-(--gray)/85"} font-bold gap-10  text-(--primary) items-center`}
+            <div className="flex flex-col gap-2">
+              {faqs.map((faq, i) => (
+                <motion.div
+                  key={i}
+                  className="question-contents-wrapper hover:cursor-pointer overflow-hidden"
+                  onClick={() =>
+                    activeFaq == faq.id
+                      ? setActiveFaq(null)
+                      : setActiveFaq(faq.id)
+                  }
+                  variants={questionVariants}
                 >
-                  <div className={`flex items-center justify-between `}>
-                    <h3>What services do we provide for our client?</h3>
-                    <AnimatePresence mode="wait" initial="false">
-                      {activeFaq == faq.id ? (
-                        <motion.div
-                          key={"plus"}
-                          className="flex justify-center w-6 h-6 items-center "
-                          initial={{ opacity: 0, rotate: 45 }}
-                          animate={{ opacity: 1, rotate: 0 }}
-                          transition={{ duration: 0.5 }}
-                        >
-                          <RiSubtractFill className="h-full w-full" />
-                        </motion.div>
-                      ) : (
-                        <motion.div
-                          key={"minus"}
-                          className="flex justify-center  w-6 h-6  items-center "
-                          initial={{ opacity: 0, rotate: -45 }}
-                          animate={{ opacity: 1, rotate: 0 }}
-                          transition={{ duration: 0.5 }}
-                        >
-                          <RiAddFill className="h-full w-full" />
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                  <div
+                    className={`question relative z-1 py-5 px-5 transition-all duration-500 justify-between ${activeFaq == faq.id ? " shadow-md shadow-(color:--gray) bg-(--primary)/20 " : "bg-(--gray)/85"} font-bold gap-10  text-(--primary) items-center`}
+                  >
+                    <div className={`flex items-center justify-between `}>
+                      <h3>What services do we provide for our client?</h3>
+                      <AnimatePresence mode="wait" initial="false">
+                        {activeFaq == faq.id ? (
+                          <motion.div
+                            key={"plus"}
+                            className="flex justify-center w-6 h-6 items-center "
+                            initial={{ opacity: 0, rotate: 45 }}
+                            animate={{ opacity: 1, rotate: 0 }}
+                            transition={{ duration: 0.5 }}
+                          >
+                            <RiSubtractFill className="h-full w-full" />
+                          </motion.div>
+                        ) : (
+                          <motion.div
+                            key={"minus"}
+                            className="flex justify-center  w-6 h-6  items-center "
+                            initial={{ opacity: 0, rotate: -45 }}
+                            animate={{ opacity: 1, rotate: 0 }}
+                            transition={{ duration: 0.5 }}
+                          >
+                            <RiAddFill className="h-full w-full" />
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
                   </div>
-                </div>
-                <div
-                  className={`bg-(--white) px-10 relative z-0 text-(--primary)/75 transition-all duration-200  ${activeFaq == faq.id ? "h-fit py-10" : " h-0 py-0 "} overflow-hidden`}
-                >
-                  <p>
-                    Discover outstanding professionals, industry leaders, and
-                    innovators from around the globe—all curated in one trusted
-                    destination.Discover outstanding professionals, industry
-                    leaders, and innovators from around the globe—all curated in
-                    one trusted destination.Discover outstanding professionals,
-                    industry leaders, and innovators from around the globe—all
-                    curated in one trusted destination.
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                  <div
+                    className={`bg-(--white) px-10 relative z-0 text-(--primary)/75 transition-all duration-200  ${activeFaq == faq.id ? "h-fit py-10" : " h-0 py-0 "} overflow-hidden`}
+                  >
+                    <p>
+                      Discover outstanding professionals, industry leaders, and
+                      innovators from around the globe—all curated in one
+                      trusted destination.Discover outstanding professionals,
+                      industry leaders, and innovators from around the globe—all
+                      curated in one trusted destination.Discover outstanding
+                      professionals, industry leaders, and innovators from
+                      around the globe—all curated in one trusted destination.
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
           <div></div>
         </div>

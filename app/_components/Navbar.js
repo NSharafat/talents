@@ -199,7 +199,7 @@ function Navbar() {
                 animate={{ translateX: "0%" }}
                 transition={{ duration: 0.5 }}
                 exit={{ translateX: "100%" }}
-                className="absolute inset-0 flex flex-col justify-between  -mt-2 -mx-4 left-0 z-998 bg-(--primary) h-screen w-screen gap-10 py-10 px-10  "
+                className="absolute inset-0 flex flex-col justify-between  -mt-2 -mx-4 left-0 z-998 bg-(--primary)  h-dvh w-screen py-10 px-10  "
               >
                 <div className="h-12 relative w-12 -my-4">
                   <Image

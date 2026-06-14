@@ -6,68 +6,67 @@ import { RiArrowRightLine } from "react-icons/ri";
 
 function Footer() {
   return (
-    <div className="bg-(--primary) h-full w-full py-20">
-      <div className="max-w-270 mx-auto bg-(--primary)/95">
+    <div className="bg-(--primary)/95 h-full w-full py-20 px-10">
+      <div className="max-w-270 mx-auto  ">
         <div className="flex gap-10 flex-col">
-          <p>Contact us</p>
-          <div className="grid grid-cols-[2fr_4fr_2fr]">
-            <div>
-              <div className="flex gap-5 items-end">
-                <h1 className="text-4xl uppercase">
-                  Lets{" "}
-                  <span className="font-bold text-(--secondary)">Discuss</span>{" "}
-                  your&nbsp;project{" "}
-                </h1>
-                <motion.button
-                  whileHover="hover"
-                  whileTap="clicked"
-                  initial="rest"
-                  animate="rest"
+          <div className="flex flex-wrap justify-between gap-10">
+            <div className="flex flex-col items-start gap-5 ">
+              <p>Contact us</p>
+              <h1 className="text-4xl uppercase">
+                Lets{" "}
+                <span className="font-bold text-(--secondary)">Discuss</span>{" "}
+                <br />
+                your&nbsp;project{" "}
+              </h1>
+              <motion.button
+                whileHover="hover"
+                whileTap="clicked"
+                initial="rest"
+                animate="rest"
+                variants={{
+                  rest: {
+                    backgroundColor: "var(--white)",
+                    color: "var(--primary)",
+                    y: 0,
+                  },
+                  hover: {
+                    backgroundColor: "var(--secondary)",
+                    color: "var(--primary)",
+                  },
+                  clicked: {
+                    y: -6,
+                  },
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                  duration: 0.2,
+                }}
+                className=" bg-(--primary) justify-between py-2 px-5  flex items-center  gap-2 rounded-full"
+              >
+                <span className="text-[0.8rem]">Let's&nbsp;Connect</span>
+                <motion.div
+                  className="rounded-full p-2"
                   variants={{
                     rest: {
-                      backgroundColor: "var(--white)",
+                      backgroundColor: "var(--white) ",
                       color: "var(--primary)",
-                      y: 0,
+                      x: 0,
                     },
                     hover: {
-                      backgroundColor: "var(--secondary)",
-                      color: "var(--primary)",
-                    },
-                    clicked: {
-                      y: -6,
+                      backgroundColor: "var(--primary)",
+                      color: "var(--secondary)",
+                      x: 3,
                     },
                   }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 20,
-                    duration: 0.2,
-                  }}
-                  className=" bg-(--primary) justify-between py-2 px-5  flex items-center  gap-2 rounded-full"
                 >
-                  <span className="text-[0.8rem]">Let's&nbsp;Connect</span>
-                  <motion.div
-                    className="rounded-full p-2"
-                    variants={{
-                      rest: {
-                        backgroundColor: "var(--white) ",
-                        color: "var(--primary)",
-                        x: 0,
-                      },
-                      hover: {
-                        backgroundColor: "var(--primary)",
-                        color: "var(--secondary)",
-                        x: 3,
-                      },
-                    }}
-                  >
-                    <RiArrowRightLine className="font-bold" />
-                  </motion.div>
-                </motion.button>{" "}
-              </div>
+                  <RiArrowRightLine className="font-bold" />
+                </motion.div>
+              </motion.button>{" "}
             </div>
-            <div></div>
-            <div className="text-right">
+
+            <div className="text-right flex flex-col justify-end md:text-right [@media(max-width:700px)]:text-left">
               <p></p>
               <p>Reageer op deze mail met: “Ik ga akkoord met de offerte</p>
               <p>Probatterij Bonserdyk 3 8601ZE, Sneek</p>
@@ -75,12 +74,12 @@ function Footer() {
             </div>
           </div>
           <hr className="bg-(--white)" />
-          <div className="flex items-center justify-between">
+          <div className="flex [@media(max-width:700px)]:flex-col [@media(max-width:700px)]:items-start [@media(max-width:700px)]:gap-10 items-center justify-between">
             <div className="flex   ">
               <Image src={logo} width={150} height={100} alt="logo" />
             </div>
-            <div>
-              <motion.ul className="flex space-x-10 h-full items-center text-(--white) ">
+            <div className="flex justify-center">
+              <motion.ul className="flex space-x-10 h-full justify-start  items-start  text-(--white) ">
                 <motion.li
                   whileHover="hover"
                   variants={{
