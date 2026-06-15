@@ -266,7 +266,10 @@ function Navbar() {
                         }}
                         className=" bg-(--primary) justify-between py-2 px-5  flex items-center  gap-2 rounded-full"
                       >
-                        <span className="text-[0.8rem]">Hire talents</span>
+                        <span className="text-[0.8rem]">
+                          {" "}
+                          <Link href={"/signup"}>Sign up</Link>
+                        </span>
                         <motion.div
                           className="rounded-full p-2"
                           variants={{
