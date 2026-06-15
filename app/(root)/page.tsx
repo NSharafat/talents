@@ -1,14 +1,14 @@
-import Hero from "./_components/Hero";
-import TrustedBy from "./_components/TrustedBy";
-import Cards from "./_components/Cards";
-import ExpertiseSection from "./_components/ExpertiseSection";
-import TopProfiles from "./_components/TopProfiles";
-import WhyUS from "./_components/WhyUS";
-import FAQ from "./_components/FAQ";
-import Intro from "./_components/Intro";
-import Testimonials from "./_components/Testimonials";
-import TopPicks from "./_components/TopPicks";
-import Footer from "./_components/Footer";
+import Hero from "../../_components/Hero";
+import TrustedBy from "../../_components/TrustedBy";
+import Cards from "../../_components/Cards";
+import ExpertiseSection from "../../_components/ExpertiseSection";
+import TopProfiles from "../../_components/TopProfiles";
+import WhyUS from "../../_components/WhyUS";
+import FAQ from "../../_components/FAQ";
+import Intro from "../../_components/Intro";
+import Testimonials from "../../_components/Testimonials";
+import TopPicks from "../../_components/TopPicks";
+import Footer from "../../_components/Footer";
 
 export default function Home() {
   return (

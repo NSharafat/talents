@@ -94,11 +94,13 @@ function Hero() {
             </div>
           </motion.div>
           <motion.div
-            className="md:text-7xl [@media(max-width:768px)]:text-2xl "
+            className="text-7xl md:text-7xl [@media(max-width:768px)]:text-2xl "
             variants={heroItems}
           >
-            <h1 className="text-center font-bold">The World&apos;s</h1>
-            <h1 className="text-center font-bold">
+            <h1 className="text-center font-bold hero-title">
+              The World&apos;s
+            </h1>
+            <h1 className="text-center font-bold hero-title">
               Most Exceptional{" "}
               <span className="text-(--secondary)">Talents.</span>
             </h1>

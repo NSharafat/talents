@@ -1,10 +1,10 @@
 "use client";
 import { motion } from "motion/react";
-import google from "../../public/clients/google.png";
-import fiverr from "../../public/clients/fiverr.png";
-import airbnb from "../../public/clients/airbnb.png";
-import binance from "../../public/clients/binance.png";
-import upwork from "../../public/clients/upwork.png";
+import google from "../public/clients/google.png";
+import fiverr from "../public/clients/fiverr.png";
+import airbnb from "../public/clients/airbnb.png";
+import binance from "../public/clients/binance.png";
+import upwork from "../public/clients/upwork.png";
 import Image from "next/image";
 
 const logos = [

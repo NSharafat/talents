@@ -4,6 +4,7 @@ import logo from "@/public/logo.png";
 import { AnimatePresence, motion, stagger } from "motion/react";
 import { RiArrowRightLine, RiCloseLine, RiMenu3Line } from "react-icons/ri";
 import { useState } from "react";
+import Link from "next/link";
 
 const mobNav = {
   start: { opacity: 0, x: 20 },
@@ -115,52 +116,54 @@ function Navbar() {
             </motion.ul>
           </div>
           <div className="flex  justify-end items-center  w-full ">
-            <motion.button
-              whileHover="hover"
-              whileTap="clicked"
-              initial="rest"
-              animate="rest"
-              variants={{
-                rest: {
-                  backgroundColor: "var(--primary)",
-                  color: "var(--white)",
-                  y: 0,
-                },
-                hover: {
-                  backgroundColor: "var(--secondary)",
-                  color: "var(--primary)",
-                },
-                clicked: {
-                  y: -6,
-                },
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 20,
-                duration: 0.2,
-              }}
-              className=" bg-(--primary) justify-between py-2 px-5  flex items-center  gap-2 rounded-full"
-            >
-              <span className="text-[0.8rem]">Sign up</span>
-              <motion.div
-                className="rounded-full p-2"
+            <Link href="/signup">
+              <motion.span
+                whileHover="hover"
+                whileTap="clicked"
+                initial="rest"
+                animate="rest"
                 variants={{
                   rest: {
-                    backgroundColor: "var(--white) ",
-                    color: "var(--primary)",
-                    x: 0,
+                    backgroundColor: "var(--primary)",
+                    color: "var(--white)",
+                    y: 0,
                   },
                   hover: {
-                    backgroundColor: "var(--primary)",
-                    color: "var(--secondary)",
-                    x: 3,
+                    backgroundColor: "var(--secondary)",
+                    color: "var(--primary)",
+                  },
+                  clicked: {
+                    y: -6,
                   },
                 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                  duration: 0.2,
+                }}
+                className=" bg-(--primary) justify-between py-2 px-5  flex items-center  gap-2 rounded-full"
               >
-                <RiArrowRightLine className="text-1xl font-bold" />
-              </motion.div>
-            </motion.button>
+                <span className="text-[0.8rem]">Sign up</span>
+                <motion.div
+                  className="rounded-full p-2"
+                  variants={{
+                    rest: {
+                      backgroundColor: "var(--white) ",
+                      color: "var(--primary)",
+                      x: 0,
+                    },
+                    hover: {
+                      backgroundColor: "var(--primary)",
+                      color: "var(--secondary)",
+                      x: 3,
+                    },
+                  }}
+                >
+                  <RiArrowRightLine className="text-1xl font-bold" />
+                </motion.div>
+              </motion.span>
+            </Link>
           </div>
         </div>
         <div className="flex md:hidden   pr-5 items-center justify-end">
