@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Button from "../../../_components/Forms/Button";
 import { RiGithubFill } from "react-icons/ri";
@@ -28,7 +29,7 @@ function SignUp() {
         <div className="flex gap-2">
           <Button
             type={"button"}
-            onClick={() => signIn("google")}
+            clicked={() => signIn("google")}
             theme={"secondary"}
             label={
               <span className="flex py-1 px-3 items-center justify-center ">
@@ -38,6 +39,7 @@ function SignUp() {
           />
           <Button
             type={"button"}
+            clicked={() => alert("Facebook sign in coming soon!")}
             theme={"secondary"}
             label={
               <span className="flex py-1 px-3  items-center justify-center ">
@@ -47,6 +49,7 @@ function SignUp() {
           />
           <Button
             type={"button"}
+            clicked={() => alert("LinkedIn sign in coming soon!")}
             theme={"secondary"}
             label={
               <span className="flex py-1 px-3  items-center justify-center ">
@@ -56,6 +59,7 @@ function SignUp() {
           />
           <Button
             type={"button"}
+            clicked={() => signIn("github")}
             theme={"secondary"}
             label={
               <span className="flex py-1 px-3  items-center justify-center ">

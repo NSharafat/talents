@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import InputText from "../../../_components/Forms/InputText";
 import Button from "../../../_components/Forms/Button";
@@ -30,6 +31,7 @@ function SignIn() {
         <div className="flex gap-2">
           <Button
             type={"button"}
+            clicked={() => alert("Google sign in coming soon!")}
             theme={"secondary"}
             label={
               <span className="flex py-1 px-3 items-center justify-center ">
@@ -39,6 +41,7 @@ function SignIn() {
           />
           <Button
             type={"button"}
+            clicked={() => alert("Facebook sign in coming soon!")}
             theme={"secondary"}
             label={
               <span className="flex py-1 px-3  items-center justify-center ">
@@ -48,6 +51,7 @@ function SignIn() {
           />
           <Button
             type={"button"}
+            clicked={() => alert("LinkedIn sign in coming soon!")}
             theme={"secondary"}
             label={
               <span className="flex py-1 px-3  items-center justify-center ">
@@ -57,6 +61,7 @@ function SignIn() {
           />
           <Button
             type={"button"}
+            clicked={() => alert("GitHub sign in coming soon!")}
             theme={"secondary"}
             label={
               <span className="flex py-1 px-3  items-center justify-center ">
