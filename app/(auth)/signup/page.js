@@ -4,6 +4,7 @@ import { RiGithubFill } from "react-icons/ri";
 import { FcGoogle } from "react-icons/fc";
 import InputText from "../../../_components/Forms/InputText";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { signIn } from "next-auth/react";
 
 function SignUp() {
   return (
@@ -27,6 +28,7 @@ function SignUp() {
         <div className="flex gap-2">
           <Button
             type={"button"}
+            onClick={() => signIn("google")}
             theme={"secondary"}
             label={
               <span className="flex py-1 px-3 items-center justify-center ">
