@@ -3,6 +3,7 @@ import Github from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
 
 const handler = NextAuth({
+  secret: process.env.BETTER_AUTH_SECRET,
   providers: [
     Google({
       clientId: process.env.AUTH_GOOGLE_CLIENT_ID!,
